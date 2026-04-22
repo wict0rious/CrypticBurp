@@ -4,7 +4,7 @@ CrypticBurp decrypts the application-layer ciphertext in responses into a new ta
 
 Originally built for mobile app pentesting where the target was encrypting its API traffic in AES on top of HTTPS, which made Repeater effectively useless. No more though!
 
-Shoutout to [@sparky23172](https://github.com/sparky23172) for the amazing support with this!
+Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing support with this!
 
 [CrypticBurp config panel photo - adding soon]
 
