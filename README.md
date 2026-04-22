@@ -1,5 +1,7 @@
 # CrypticBurp
 
+A really simple Burp Suite extension for dealing with apps that encrypt their HTTP traffic on top of TLS.
+
 CrypticBurp decrypts the application-layer ciphertext in responses into a new tab  (**Decrypted**), lets you edit the decrypted plaintext, and re-encrypts the requests on their way to the server.
 
 Originally built for mobile app pentesting where the target was encrypting its API traffic in AES on top of HTTPS, which made Repeater effectively useless. No more though!
