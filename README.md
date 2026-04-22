@@ -23,7 +23,7 @@ Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing suppor
 - Burp Suite Community or Pro (duh)
 - **Jython 2.7** standalone jar configured in Burp (Extensions → Extensions settings → Python environment)
 
-## Install
+## Installing CrypticBurp
 
 1. Clone or download this repo
 2. In Burp: **Extensions → Installed → Add**
@@ -132,7 +132,7 @@ Load with **Load Profile** and save with **Save Profile**. Your own profiles are
 - Jython 2.7 not configured in Burp
 - Check **Extensions → Errors** tab for the traceback
 
-## Disclaimer
+## Disclaimers
 
 This tool is for **authorized security testing and research only**. The author is not liable for **ANY** misuse.
 
