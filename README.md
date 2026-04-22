@@ -19,12 +19,12 @@ Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing suppor
 ## Requirements
 
 - Burp Suite Community or Pro (duh)
-- **Jython 2.7** standalone jar configured in Burp (Extensions → Extensions settings → Python environment)
+- **Jython 2.7** standalone jar configured in Burp (Extensions -> Extensions settings -> Python environment)
 
 ## Install
 
 1. Clone or download this repo
-2. In Burp: **Extensions → Installed → Add**
+2. In Burp: **Extensions -> Installed -> Add**
 3. Extension type: **Python**
 4. Extension file: select `crypticburp.py`
 5. Enjoy **CrypticBurp**!
