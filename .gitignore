@@ -7,7 +7,7 @@ __pycache__/
 # Jython
 *.jy
 
-# Burp / personal profiles (don't commit your target keys!)
+# Burp/personal profiles (don't commit your target keys!)
 profiles/*.json
 !profiles/example.json
 
