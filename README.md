@@ -60,8 +60,7 @@ Typical output you'd paste into CrypticBurp:
 [ENC IV ]    54 65 73 74 4b 65 79 31 32 33 34 35 36 37 38 39
 [ENCRYPT]    {"user":"alice","action":"login"}
 ```
-
-> Note: there is no SSL pinning bypass in this script. If the app pins certs, try to run a pinning bypass (like the one by Maurizio Siddu) alongside this script, or combine it with this one (what I did). Figure it out!
+**Note:** there is no SSL pinning bypass in this script. If the app pins certs, try to run a pinning bypass (like the one by Maurizio Siddu) alongside this script, or combine it with this one (what I did). Figure it out!
 
 ## Configuration Profiles
 
