@@ -102,7 +102,7 @@ Load with **Load Profile** and save with **Save Profile**. Your own profiles are
 |-------------|---------------------------------------------------------------------------------------------------------------------------|
 | Algorithms  | `AES/CBC/NoPadding`, `AES/CBC/PKCS5Padding`, `AES/ECB/NoPadding`, `AES/ECB/PKCS5Padding`, `AES/GCM/NoPadding`, `DES/CBC/PKCS5Padding`, `DESede/CBC/PKCS5Padding` |
 | Key formats | `ASCII`, `Hex`, `Base64`                                                                                                  |
-| Encodings   | `Base64`, `Base64-URLSafe`, `Hex`, `Raw`                                                                                  |
+| Encodings   | `Base64`, `Base64-URLSafe`, `Hex`, `None`                                                                                   |
 | Paddings    | `Tab (0x09)`, `Space (0x20)`, `Null (0x00)`, `PKCS7 (auto)`, `None`                                                       |
 
 ## Profile Config Options
