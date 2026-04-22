@@ -42,6 +42,27 @@ Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing suppor
 4. Click **Apply Config** (**Save Profile** to save to a JSON config file)
 5. Observe Proxy/Repearter traffic in the **Decrypted** tab. This will appear whenever the request matches your host/path filter
 
+### Finding the key with Frida
+
+A ready-to-run hook is bundled at [`frida/crypto_hook.js`](frida/crypto_hook.js). It hooks both native `libcrypto` (`EVP_EncryptInit_ex`, `EVP_EncryptUpdate`, `EVP_DecryptUpdate`, …) and Java `javax.crypto.Cipher`, and prints the cipher type, key, IV, and plaintext for every call, being perhaps too verbose (feel free to edit to only show on intial calls if needed).
+
+```bash
+frida -U -l frida/crypto_hook.js -f com.target.app
+```
+
+Typical output you'd paste into CrypticBurp:
+
+```
+[CIPHER]     aes-128-cbc
+[KEY LEN]    16 bytes (128 bits)
+[IV LEN]     16 bytes
+[ENC KEY]    54 65 73 74 4b 65 79 31 32 33 34 35 36 37 38 39
+[ENC IV ]    54 65 73 74 4b 65 79 31 32 33 34 35 36 37 38 39
+[ENCRYPT]    {"user":"alice","action":"login"}
+```
+
+> Note: there is no SSL pinning bypass in this script. If the app pins certs, try to run a pinning bypass (like the one by Maurizio Siddu) alongside this script, or combine it with this one (what I did). Figure it out!
+
 ## Configuration Profiles
 
 Reusable JSON config files to make workflow with multiple applications easier. See `profiles/example.json`:
