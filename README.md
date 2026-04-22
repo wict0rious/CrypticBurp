@@ -8,7 +8,7 @@ Originally built for mobile app pentesting where the target was encrypting its A
 
 Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing support with this!
 
-[CrypticBurp config panel photo - adding soon]
+[CrypticBurp config panel photo - adding soon!]
 
 ## Features
 
