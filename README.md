@@ -21,12 +21,12 @@ Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing suppor
 ## Requirements
 
 - Burp Suite Community or Pro (duh)
-- **Jython 2.7** standalone jar configured in Burp (Extensions -> Extensions settings -> Python environment)
+- **Jython 2.7** standalone jar configured in Burp (Extensions → Extensions settings → Python environment)
 
 ## Install
 
 1. Clone or download this repo
-2. In Burp: **Extensions -> Installed -> Add**
+2. In Burp: **Extensions → Installed → Add**
 3. Extension type: **Python**
 4. Extension file: select `crypticburp.py`
 5. Enjoy **CrypticBurp**!
@@ -100,9 +100,9 @@ Load with **Load Profile** and save with **Save Profile**. Your own profiles are
 
 | Category    | Options                                                                                                                   |
 |-------------|---------------------------------------------------------------------------------------------------------------------------|
-| Algorithms  | `AES/CBC/NoPadding`, `AES/CBC/PKCS5Padding`, `AES/ECB/NoPadding`, `AES/ECB/PKCS5Padding`, `AES/GCM/NoPadding`, `DES/CBC/PKCS5Padding`, `DESede/CBC/PKCS5Padding` |
+| Algorithms  | `AES/CBC/NoPadding`, `AES/CBC/PKCS5Padding`, `AES/CTR/NoPadding`, `AES/ECB/NoPadding`, `AES/ECB/PKCS5Padding`, `AES/GCM/NoPadding`, `DES/CBC/PKCS5Padding`, `DESede/CBC/PKCS5Padding` |
 | Key formats | `ASCII`, `Hex`, `Base64`                                                                                                  |
-| Encodings   | `Base64`, `Base64-URLSafe`, `Hex`, `None`                                                                                   |
+| Encodings   | `Base64`, `Base64-URLSafe`, `Hex`, `Raw`                                                                                  |
 | Paddings    | `Tab (0x09)`, `Space (0x20)`, `Null (0x00)`, `PKCS7 (auto)`, `None`                                                       |
 
 ## Profile Config Options
@@ -130,7 +130,7 @@ Load with **Load Profile** and save with **Save Profile**. Your own profiles are
 
 **Extension won't load**
 - Jython 2.7 not configured in Burp
-- Check **Extensions -> Errors** tab for the traceback
+- Check **Extensions → Errors** tab for the traceback
 
 ## Disclaimer
 
