@@ -118,4 +118,4 @@ This tool is for **authorized security testing and research only**. The author i
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
