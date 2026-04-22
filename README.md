@@ -31,7 +31,7 @@ Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing suppor
 4. Extension file: select `crypticburp.py`
 5. Enjoy **CrypticBurp**!
 
-## Quick Start
+## Using CrypticBurp
 
 1. Obtain the target app's encryption key and IV. Common approaches:
    - Frida hooks on `EVP_EncryptUpdate` / `EVP_DecryptUpdate` (native OpenSSL)
