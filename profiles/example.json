@@ -1,6 +1,6 @@
 {
-  "name": "App name",
-  "description": "A lil app description",
+  "name": "Good App",
+  "description": "Optional",
   "target_host": "api.example.com",
   "target_path": "/v2/",
   "decrypt_query": false,
