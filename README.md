@@ -108,7 +108,7 @@ Load with **Load Profile** and save with **Save Profile**. Your own profiles are
 
 **Extension won't load**
 - Jython 2.7 not configured in Burp
-- Check **Extensions → Errors** tab for the traceback
+- Check **Extensions -> Errors** tab for the traceback
 
 ## Disclaimer
 
