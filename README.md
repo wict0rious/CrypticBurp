@@ -40,7 +40,7 @@ Shoutout to [sparky23172](https://github.com/sparky23172) for the amazing suppor
 2. Open the **CrypticBurp** tab in Burp
 3. Fill in target host, path, algorithm, key, encoding, padding
 4. Click **Apply Config** (**Save Profile** to save to a JSON config file)
-5. Observe Proxy/Repearter traffic in the **Decrypted** tab. This will appear whenever the request matches your host/path filter
+5. Observe Proxy/Repeater traffic in the **Decrypted** tab. This will appear whenever the request matches your host/path filter
 
 ### Finding the key with Frida
 
