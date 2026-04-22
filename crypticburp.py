@@ -21,6 +21,7 @@ class CryptoEngine:
     ALGORITHMS = [
         "AES/CBC/NoPadding",
         "AES/CBC/PKCS5Padding",
+        "AES/CTR/NoPadding",
         "AES/ECB/NoPadding",
         "AES/ECB/PKCS5Padding",
         "AES/GCM/NoPadding",
@@ -62,7 +63,17 @@ class CryptoEngine:
             self.key_spec = SecretKeySpec(key_bytes, algo_name)
             if "ECB" not in self.algorithm:
                 self.iv_spec = IvParameterSpec(iv_bytes)
-            print("[CryptoEngine] Config set - Key/IV specs created")
+
+            def _hex(b):
+                try:
+                    return ''.join('%02x' % (x & 0xff) for x in b)
+                except Exception:
+                    return repr(b)
+
+            print("[CryptoEngine] algo=%s  key=%d bytes  iv=%d bytes"
+                  % (self.algorithm, len(key_bytes), len(iv_bytes)))
+            print("[CryptoEngine] key hex: %s" % _hex(key_bytes))
+            print("[CryptoEngine] iv  hex: %s" % _hex(iv_bytes))
         except Exception as e:
             print("[CryptoEngine] Error creating key specs: %s" % str(e))
             self.key_spec = None
@@ -88,6 +99,10 @@ class CryptoEngine:
     def _remove_padding(self, data):
         """Remove custom padding from decrypted data, tries multiple methods"""
         if "NoPadding" not in self.algorithm:
+            return data
+        
+        # Stream/authenticated modes never need block padding.
+        if "CTR" in self.algorithm or "GCM" in self.algorithm:
             return data
         
         if not data:
@@ -135,6 +150,10 @@ class CryptoEngine:
     def _add_padding(self, data_bytes):
         """Add custom padding to plaintext - common for custom mobile app specs"""
         if "NoPadding" not in self.algorithm:
+            return data_bytes
+        
+        # Stream/authenticated modes never need block padding.
+        if "CTR" in self.algorithm or "GCM" in self.algorithm:
             return data_bytes
         
         block_size = 16 if "AES" in self.algorithm else 8
