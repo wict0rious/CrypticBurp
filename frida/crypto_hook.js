@@ -8,8 +8,8 @@
  *      frida -U -l crypto_hook.js -f com.target.app
  *
  *  No SSL pinning bypass here. If the app pins certs, run a pinning
- *  bypass (like the one by Maurizio Siddu) alongside
- *  this script, or figure it out somehow!.
+ *  bypass (like the one by Maurizio Siddu) alongside this script, or
+ *  combine it with this one (what I did). Figure it out!
  */
 
 console.log('[*] CrypticBurp crypto hook loaded');
