@@ -136,7 +136,7 @@ Load with **Load Profile** and save with **Save Profile**. Your own profiles are
 
 This tool is for **authorized security testing and research only**. The author is not liable for **ANY** misuse.
 
-Claude Opus was used to aid in the development of this tool.
+For transparency, Claude Opus was used to aid in the development of this tool.
 
 ## License
 
